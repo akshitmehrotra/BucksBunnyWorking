@@ -2,37 +2,188 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #313131;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.player {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("./bugsBunny.png");
+  background-size: contain  
+}
+
+.block {
+  position: absolute;
+  width: 150px;
+  height: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #afa9a900;
+  border: white 1px solid;
+  border-radius: 25rem;
+}
+
+.hit__correct {
+  border-color: #6FE579;
+  color: #6FE579;
+}
+
+.hit__wrong{
+  border-color: #FF5A5F;
+  color: #FF5A5F  ;
+}
+.main__container{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.question__container{
+  font-size: x-large;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content__container{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.content__content{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 25vh;
+  width: 50%;
+  font-size: large; 
+  border: 1px solid #4D4D4D;
+  padding: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555; 
+}
+
+.language-active{
+  border: white 1px solid;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem ;
+  color: #313131;
+  background-color: white;
+  cursor: pointer;
+  margin:0 1rem;
+}
+.language{
+  border: white 1px solid;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem ;
+  color: white;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.language:hover{
+  color: #313131;
+  background-color: white;
+}
+
+.language__container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0 1rem;
+}
+
+.video__link{
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.video__link:hover{
+  font-weight: bold;
+}
+
+.main__logo{
+  margin-bottom: 1rem;
+  color: white;
+  font-size: xxx-large;
+}
+
+.course__container{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  height: 75px;
+}
+
+.start__main{
+  /* border: white 1px solid; */
+
+  margin: 0;
+}
+
+.start__logo{
+  margin-top: 2rem;
+  font-size: 6rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start__text{
+  color: white;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center ;
+  margin-top: 1rem;
+}
+
+.start__button{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button__container{
+  transition: transform 0.3s ease-in-out;
+}
+
+.button__container:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.start__icon{
+  color: white;
 }

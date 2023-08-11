@@ -177,10 +177,14 @@ function App() {
             </div>
           </div>
           <div className="content__container">
-            <div className="content__content">{data[level].content}</div>
+            <div className="content__content">{language === 0 ? data[level].content :
+   language === 1 ? data[level].contenth :
+   language === 2 ? data[level].contentp : ''}</div>
           </div>
           <div className="question__container">
-            Question: {data[level].question}
+            Question: {language === 0 ? data[level].question :
+   language === 1 ? data[level].questionh :
+   language === 2 ? data[level].questionp : ''}
           </div>
           <div className="game-container">
             <div

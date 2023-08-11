@@ -129,6 +129,8 @@ body {
   color: white;
   text-decoration: underline;
   cursor: pointer;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .video__link:hover {

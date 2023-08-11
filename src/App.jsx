@@ -5,7 +5,7 @@ import CircleComponent from "./CircleConmponent";
 import bunny from "./bugsBunny.png";
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { CiPlay1 } from "react-icons/ci";
-
+import Home from "./Home";
 const BLOCK_SIZE = 150;
 const PLAYER_SIZE = 50;
 const JUMP_HEIGHT = 200;
@@ -155,7 +155,7 @@ function App() {
               >
                 English
               </div>
-              <p className="video__link">video</p>
+              <p className="video__link"><Home videolink={"https://www.youtube.com/embed/3zZ0ugbkBZY"}/></p>
             </div>
             <div className="">
               <div
@@ -165,7 +165,7 @@ function App() {
               >
                 Hindi
               </div>
-              <p className="video__link">video</p>
+              <p className="video__link"><Home videolink={"https://www.youtube.com/embed/iLR1lVC11vk"}/></p>
             </div>
             <div className="">
               <div
@@ -175,7 +175,7 @@ function App() {
               >
                 Punjabi
               </div>
-              <p className="video__link">video</p>
+              <p className="video__link"><Home videolink={"https://www.youtube.com/embed/Y1MOfnd-hC8"}/></p>
             </div>
           </div>
           <div className="content__container">
@@ -232,20 +232,6 @@ function App() {
     </div>
     <div className="start__text">
       Thank you for completing this course. Hope you learned something valuable.
-    </div>
-    <div className="social-media-buttons">
-      <a href="https://www.facebook.com" style={{ marginRight: '10px' }}>
-        <img src="facebook-icon.png" alt="Facebook" style={{ width: '30px', height: '30px' }} />
-      </a>
-      <a href="https://www.linkedin.com" style={{ marginRight: '10px' }}>
-        <img src="linkedin-icon.png" alt="LinkedIn" style={{ width: '30px', height: '30px' }} />
-      </a>
-      <a href="https://www.instagram.com" style={{ marginRight: '10px' }}>
-        <img src="instagram-icon.png" alt="Instagram" style={{ width: '30px', height: '30px' }} />
-      </a>
-      <a href="https://www.youtube.com">
-        <img src="youtube-icon.png" alt="YouTube" style={{ width: '30px', height: '30px' }} />
-      </a>
     </div>
     <div className="start__button">
       <div className="button__container" onClick={() => setLevel(1)}>

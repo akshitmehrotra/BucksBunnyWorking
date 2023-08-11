@@ -10,7 +10,7 @@ const BLOCK_SIZE = 150;
 const PLAYER_SIZE = 50;
 const JUMP_HEIGHT = 200;
 const GRAVITY = 2;
-
+let i = 0;
 function App() {
   const [playerPos, setPlayerPos] = useState({ x: 0, y: 0 });
   const [level, setLevel] = useState(0);
@@ -88,6 +88,8 @@ function App() {
           !block.hit
         ) {
           handleBlockCollision(index);
+          i++;
+          console.log(i);
         }
       });
     };
@@ -109,7 +111,7 @@ function App() {
     const optionsh = data[level].optionsh;
     const optionsp = data[level].optionsp;
     console.log(correctIndex);
-
+    i = 0;
     const updatedBlocks = blocks.map((block, index) => ({
       ...block,
       isCorrect: index === correctIndex ? true : false,

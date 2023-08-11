@@ -106,12 +106,14 @@ function App() {
   useEffect(() => {
     const correctIndex = data[level].Correct;
     const options = data[level].options;
+    const optionsh = data[level].optionsh;
+    const optionsp = data[level].optionsp;
     console.log(correctIndex);
 
     const updatedBlocks = blocks.map((block, index) => ({
       ...block,
       isCorrect: index === correctIndex ? true : false,
-      option: options[index],
+      option: language===0 ? options[index]:language===1 ?optionsh[index]:optionsp[index],
       hit: false,
     }));
     setBlocks(updatedBlocks);
@@ -121,7 +123,7 @@ function App() {
     //   console.log(e);
 
     // })
-  }, [level]);
+  }, [level, language]);
 
   return (
     <>

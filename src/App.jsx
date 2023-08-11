@@ -224,19 +224,37 @@ function App() {
           </div>
         </div>
       )}
-      {level===data.length-1 && <div className="start__main">
-        <div className="start__logo">
-          <img src={bunny} alt="" />
-          BucksBunny
-        </div>
-        <div className="start__text">
-          Thank you for completing this course. Hope you learnt something valuable
-        </div>
-        <div className="start__button">
-          <div className="button__container" onClick={()=>setLevel(1)}>
-          <MdOutlineRestartAlt className="start__icon" /></div>
-        </div>
-      </div>}
+      {level === data.length - 1 && (
+  <div className="start__main">
+    <div className="start__logo">
+      <img src={bunny} alt="" />
+      BucksBunny
+    </div>
+    <div className="start__text">
+      Thank you for completing this course. Hope you learned something valuable.
+    </div>
+    <div className="social-media-buttons">
+      <a href="https://www.facebook.com" style={{ marginRight: '10px' }}>
+        <img src="facebook-icon.png" alt="Facebook" style={{ width: '30px', height: '30px' }} />
+      </a>
+      <a href="https://www.linkedin.com" style={{ marginRight: '10px' }}>
+        <img src="linkedin-icon.png" alt="LinkedIn" style={{ width: '30px', height: '30px' }} />
+      </a>
+      <a href="https://www.instagram.com" style={{ marginRight: '10px' }}>
+        <img src="instagram-icon.png" alt="Instagram" style={{ width: '30px', height: '30px' }} />
+      </a>
+      <a href="https://www.youtube.com">
+        <img src="youtube-icon.png" alt="YouTube" style={{ width: '30px', height: '30px' }} />
+      </a>
+    </div>
+    <div className="start__button">
+      <div className="button__container" onClick={() => setLevel(1)}>
+        <MdOutlineRestartAlt className="start__icon" />
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 }
